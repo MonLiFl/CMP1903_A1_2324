@@ -16,6 +16,8 @@ namespace CMP1903_A1_2324
 
                 Game game = new Game();
 
+                Console.WriteLine("Testing");
+                
                 game.Rolls();
 
                 Debug.Assert(game.die1.RollValue >= 1 && game.die1.RollValue <= 6, "Die 1 result is not between 1 and 6 (inclusive)");
