@@ -11,7 +11,7 @@ namespace CMP1903_A1_2324
         public Die die1;
         public Die die2;
         public Die die3;
-        private int total = 0;
+        private int rollTotal = 0;
 
         public Game()
         {
@@ -28,12 +28,12 @@ namespace CMP1903_A1_2324
                 int roll2 = die2.Roll();
                 int roll3 = die3.Roll();
 
-                total = roll1 + roll2 + roll3;
+                rollTotal = roll1 + roll2 + roll3;
 
                 Console.WriteLine("Die 1 result: " + roll1);
                 Console.WriteLine("Die 2 result: " + roll2);
                 Console.WriteLine("Die 3 result: " + roll3);
-                Console.WriteLine("Total of all 3 dice rolls: " + total);
+                Console.WriteLine("Total of all 3 dice rolls: " + rollTotal);
             }
             catch (Exception)
             {
