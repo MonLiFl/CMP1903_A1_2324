@@ -8,14 +8,37 @@ namespace CMP1903_A1_2324
 {
     internal class Game
     {
-        /*
-         * The Game class should create three die objects, roll them, sum and report the total of the three dice rolls.
-         *
-         * EXTRA: For extra requirements (these aren't required though), the dice rolls could be managed so that the
-         * rolls could be continous, and the totals and other statistics could be summarised for example.
-         */
+        public Die die1;
+        public Die die2;
+        public Die die3;
+        private int total = 0;
 
-        //Methods
+        public Game()
+        {
+            die1 = new Die();
+            die2 = new Die();
+            die3 = new Die();
 
+        }
+        public void Rolls()
+        {
+            try
+            {
+                int roll1 = die1.Roll();
+                int roll2 = die2.Roll();
+                int roll3 = die3.Roll();
+
+                total = roll1 + roll2 + roll3;
+
+                Console.WriteLine("Die 1 result: " + roll1);
+                Console.WriteLine("Die 2 result: " + roll2);
+                Console.WriteLine("Die 3 result: " + roll3);
+                Console.WriteLine("Total of all 3 dice rolls: " + total);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("An error occured while dice rolling");
+            }
+        }
     }
 }

@@ -10,10 +10,20 @@ namespace CMP1903_A1_2324
     {
         static void Main(string[] args)
         {
-            /*
-             * Create a Game object and call its methods.
-             * Create a Testing object to verify the output and operation of the other classes.
-             */
+            try
+            {
+                Game game = new Game();
+
+                game.Rolls();
+
+                Testing testing = new Testing();
+
+                testing.TestGame();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("An error occured in the main method");
+            }
         }
     }
 }
